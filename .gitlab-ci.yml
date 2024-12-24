@@ -1,0 +1,55 @@
+stages:
+  - build
+  - deploy
+  - test
+
+build-job:
+  stage: build
+  script:
+    - echo "Hello, $GITLAB_USER_LOGIN!"
+
+
+depoloy-job:
+  stage: build
+  script:
+    - echo "Hello, $GITLAB_USER_LOGIN!"
+
+test_playwright_dev:
+  image: mcr.microsoft.com/playwright:v1.23.0-focal
+  stage: test
+  script:
+    - echo "Running tests in DEV environment"
+    - npm ci
+    - npx playwright install
+    - npm run test:dev:headless
+  variables:
+    ENV: "DEV"  
+  only:
+    - dev 
+
+test_playwright_staging:
+  image: mcr.microsoft.com/playwright:v1.23.0-focal
+  stage: test
+  script:
+    - echo "Running tests in STAGING environment"
+    - npm ci
+    - npx playwright install
+    - npm run test:staging:headless
+  variables:
+    ENV: "STAGING"  
+  only:
+    - staging
+
+test_playwright_main:
+  image: mcr.microsoft.com/playwright:v1.23.0-focal
+  stage: test
+  script:
+    - echo "Running tests in DEV environment"
+    - npm ci
+    - npx playwright install
+    - npm run test:main:headless
+  variables:
+    ENV: "MAIN"  
+  only:
+    - main
+

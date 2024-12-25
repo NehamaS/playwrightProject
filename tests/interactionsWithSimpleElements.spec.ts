@@ -1,8 +1,8 @@
 import { test, expect } from '@playwright/test';
-import { EnvUrl, Environments } from '../enum';
+import { EnvUrl, Environments } from '../setup/enum';
 import { interactionsWithSimpleElementsNamesNavigation } from '../helper/navigations'
 import { extractTableData } from '../helper/interactionsWithSimpleElements'
-import { ENVIRONMENTS_INPUTS } from '../constants'
+import { ENVIRONMENTS_INPUTS } from '../setup/constants'
 
 import * as dotenv from 'dotenv';
 dotenv.config();

@@ -1,8 +1,8 @@
 import { test, expect } from '@playwright/test';
-import { EnvUrl, Environments } from '../enum';
+import { EnvUrl, Environments } from '../setup/enum';
 import { loginAutomationNavigation } from '../helper/navigations'
 import { fillEmailAndPassword } from '../helper/loginAutomation'
-import { ENVIRONMENTS_INPUTS } from '../constants'
+import { ENVIRONMENTS_INPUTS } from '../setup/constants'
 import { getPassword } from '../helper/utils'
 
 

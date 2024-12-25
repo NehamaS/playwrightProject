@@ -1,5 +1,5 @@
 import { test } from '@playwright/test';
-import { EnvUrl, Environments } from '../enum';
+import { EnvUrl, Environments } from '../setup/enum';
 import { learnHowToAutomateAnApplicationThatEvolvesOverTimeNavigation } from '../helper/navigations'
 import { fillMaleGender,fillRandomLastName,fillRandomName } from '../helper/learnHowToAutomateAnApplicationThatEvolvesOverTime'
 

@@ -1,4 +1,4 @@
-import { Page } from 'playwright';
+ import { Page } from 'playwright';
 interface ExtractTableData {
     websitePage: Page
 }

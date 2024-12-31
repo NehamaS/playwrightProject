@@ -1,83 +1,95 @@
-interface TableRow {
-	title: string;
-	work: string;
-	salary: string;
-}
+import { TestEnviroment } from '../setup/types'
 
-interface TestEnviroment {
-	emailAndPassword: {
-		email: string
-		wrongPassword:string
-	}
-	tableData:TableRow[]
-}
+export const WRONG_EMAIL_ERROR_MSG = "Enter a valid email";
+export const WRONG_CARD_NUMBER_ERROR_MSG = "Enter a valid card number";
+
+
 
 export const DEV: TestEnviroment = <TestEnviroment>{
-	emailAndPassword: {
-		email: "nehama.dev@gmail.com",
-		wrongPassword: "Shuki12st"
+	productsP: [
+		{ productName: "Dropit Hamburger (QA Automation)", quantity: 2, size: "Medium" },
+		{ productName: "Dropit Hamburger (QA Automation)", quantity: 1, size: "So large you can\'t eat it"},
+		{ productName: "Dropit Chips (QA Automation)", quantity: 1, size: "Large" },
+		{ productName: "Dropit Chips (QA Automation)", quantity: 1, size:"Too much for you to handle"},
+	],
+	productsN: [
+		{ productName: "Hamburger", quantity: 1, size: "Medium" },
+		{ productName: "Dropit Chips (QA Automation)", quantity: 1, size: "Medium" },
+	],
+	contact: '0533872453',
+	delivery: {
+		country: "Israel",
+		firstName: "Nehama",
+		lastName: "Stefanski",
+		address: "Harav Kook 28",
+		apartment: "6",
+		postalCode: "1111111",
+		city: "BneyBrak"
 	},
-	tableData: [{
-		title: 'Software Development Engineer in Test',
-		work: 'Automation',
-		salary: '$150,000+'
+	payment: {
+		cardNumber: "1",
+		expirationDay:"12/26",
+		securityCode: "777",
+		nameOnCard: "Bogus Gateway"
 	},
-	{
-		title: 'Automation Testing Architect',
-		work: 'Automation',
-		salary: '$120,000+'
-	},
-	{
-		title: 'Quality Assurance Engineer',
-		work: 'Manual',
-		salary: '$50,000+'
-	}]
+	totalAmountForPay: '53.99'
 }
 
 export const STAGING: TestEnviroment = <TestEnviroment>{
-	emailAndPassword: {
-		email: "nehama.staging@gmail.com",
-		wrongPassword: "Shuki12st"
+	productsP: [
+		{ productName: "Dropit Hamburger (QA Automation)", quantity: 2, size: "Medium" },
+		{ productName: "Dropit Hamburger (QA Automation)", quantity: 1, size: "So large you can\'t eat it" },
+		{ productName: "Dropit Chips (QA Automation)", quantity: 1, size: "Large" },
+		{ productName: "Dropit Chips (QA Automation)", quantity: 1, size: "Too much for you to handle" },
+	],
+	productsN: [
+		{ productName: "Hamburger", quantity: 1, size: "Medium" },
+		{ productName: "Dropit Chips (QA Automation)", quantity: 1, size: "Medium" },
+	],
+	delivery: {
+		country: "Israel",
+		firstName: "Nehama",
+		lastName: "Stefanski",
+		address: "Harav Kook 28",
+		apartment: "6",
+		postalCode: "1111111",
+		city: "BneyBrak"
 	},
-	tableData: [{
-		title: 'Software Development Engineer in Test',
-		work: 'Automation',
-		salary: '$150,000+'
-	},
-	{
-		title: 'Automation Testing Architect',
-		work: 'Automation',
-		salary: '$120,000+'
-	},
-	{
-		title: 'Quality Assurance Engineer',
-		work: 'Manual',
-		salary: '$50,000+'
-	}]
+	payment: {
+		cardNumber: "1",
+		expirationDay: "12/26",
+		securityCode: "777",
+		nameOnCard: "Bogus Gateway"
+	}
 }; 
 
 export const MAIN: TestEnviroment = <TestEnviroment>{
-	emailAndPassword: {
-		email: "nehama.main@gmail.com",
-		wrongPassword: "Shuki12st"
+	productsP: [
+		{ productName: "Dropit Hamburger (QA Automation)", quantity: 2, size: "Medium" },
+		{ productName: "Dropit Hamburger (QA Automation)", quantity: 1, size: "So large you can\'t eat it" },
+		{ productName: "Dropit Chips (QA Automation)", quantity: 1, size: "Large" },
+		{ productName: "Dropit Chips (QA Automation)", quantity: 1, size: "Too much for you to handle" },
+	],
+	productsN: [
+		{ productName: "Hamburger", quantity: 1, size: "Medium" },
+		{ productName: "Dropit Chips (QA Automation)", quantity: 1, size: "Medium" },
+	],
+	delivery: {
+		country: "Israel",
+		firstName: "Nehama",
+		lastName: "Stefanski",
+		address: "Harav Kook 28",
+		apartment: "6",
+		postalCode: "1111111",
+		city: "BneyBrak"
 	},
-	tableData: [{
-		title: 'Software Development Engineer in Test',
-		work: 'Automation',
-		salary: '$150,000+'
-	},
-	{
-		title: 'Automation Testing Architect',
-		work: 'Automation',
-		salary: '$120,000+'
-	},
-	{
-		title: 'Quality Assurance Engineer',
-		work: 'Manual',
-		salary: '$50,000+'
-	}]
+	payment: {
+		cardNumber: "1",
+		expirationDay: "12/26",
+		securityCode: "777",
+		nameOnCard: "Bogus Gateway"
+	}
 }; 
-
 
 export const ENVIRONMENTS_INPUTS = {
 	DEV:DEV,

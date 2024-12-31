@@ -1,4 +1,4 @@
-import { Environments } from '../enum'
+import { Environments } from '../setup/enum'
 export function getPassword(env: Environments): string | undefined {
     switch (env) {
         case Environments.DEV:

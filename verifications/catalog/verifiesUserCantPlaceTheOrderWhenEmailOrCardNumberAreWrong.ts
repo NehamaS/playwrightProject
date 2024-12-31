@@ -32,8 +32,8 @@ export const verifiesUserCantPlaceTheOrderWhenEmailOrCardNumberAreWrong = async 
 
     await expect(dropitShopSite.getByText(WRONG_CARD_NUMBER_ERROR_MSG)).toBeVisible() 
 
-    const errorTestColor = await dropitShopSite.getByText(WRONG_CARD_NUMBER_ERROR_MSG).evaluate(el => window.getComputedStyle(el).color);
-    await expect(errorTestColor).toBe('rgb(221, 29, 29)');
+    const errorTextColor = await dropitShopSite.getByText(WRONG_CARD_NUMBER_ERROR_MSG).evaluate(el => window.getComputedStyle(el).color);
+    await expect(errorTextColor).toBe('rgb(221, 29, 29)');
 
     await expect(dropitShopSite.getByText(/^Confirmation #\w+$/)).not.toBeVisible()
 };

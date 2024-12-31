@@ -3,8 +3,6 @@ import { TestEnviroment } from '../setup/types'
 export const WRONG_EMAIL_ERROR_MSG = "Enter a valid email";
 export const WRONG_CARD_NUMBER_ERROR_MSG = "Enter a valid card number";
 
-
-
 export const DEV: TestEnviroment = <TestEnviroment>{
 	productsP: [
 		{ productName: "Dropit Hamburger (QA Automation)", quantity: 2, size: "Medium" },

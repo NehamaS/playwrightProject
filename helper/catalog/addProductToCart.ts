@@ -1,14 +1,9 @@
 import { Page } from 'playwright';
 import { expect } from '@playwright/test';
-
-interface Product {
-    productName: string,
-    quantity: number,
-    size: 'Small' | 'Medium' | 'Large' | 'So large you can\'t eat it' | 'Too much for you to handle'
-}
+import { ProductDetails } from '../../setup/types'
 interface AddProductToCartType {
     dropitShopSite: Page
-    product: Product
+    product: ProductDetails
 }
 
 export const addProductToCart = async ({ dropitShopSite, product }: AddProductToCartType) => {

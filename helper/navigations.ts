@@ -5,7 +5,6 @@ interface pageNavigation {
     pageUrl: string
 }
 
-
 export const catalogNavigation = async ({ dropitShopSite, pageUrl }: pageNavigation) => {
     await dropitShopSite.getByRole('link', { name: 'Catalog', exact: true }).click()
     await expect(dropitShopSite).toHaveURL(pageUrl);

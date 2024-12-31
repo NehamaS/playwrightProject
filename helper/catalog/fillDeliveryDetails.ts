@@ -1,13 +1,11 @@
 import { Page } from 'playwright';
 import { expect } from '@playwright/test';
 import { DeliveryDetails } from '../../setup/types'
-
 interface FillDeliveryDetailsType {
     dropitShopSite: Page
     deliveryDetails: DeliveryDetails
     saveThisInformationForNextTime: boolean
-}
-    
+}   
 
 export const fillDeliveryDetails = async ({ dropitShopSite, deliveryDetails, saveThisInformationForNextTime }: FillDeliveryDetailsType) => {
     await dropitShopSite.getByPlaceholder("First name (optional)").fill(deliveryDetails.firstName)

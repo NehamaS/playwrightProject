@@ -3,7 +3,6 @@ export interface ProductDetails {
 	quantity: number,
 	size: 'Small' | 'Medium' | 'Large' | 'So large you can\'t eat it' | 'Too much for you to handle'
 }
-
 export interface DeliveryDetails {
 	country: string,
 	firstName: string
@@ -19,7 +18,6 @@ export interface  PaymentDetails {
 	securityCode: string
 	nameOnCard: string
 }
-
 export interface TestEnviroment {
 	productsP: ProductDetails[]
 	productsN: ProductDetails[]
@@ -27,5 +25,4 @@ export interface TestEnviroment {
 	delivery: DeliveryDetails
 	payment: PaymentDetails
 	totalAmountForPay: string
-
 }

@@ -16,8 +16,8 @@ test.describe('Main Page --> Catalog', () => {
         await dropitShopSite.goto(baseUrl);
         await login({ dropitShopSite, password: getPassword(ENV) })
         await catalogNavigation({ dropitShopSite, pageUrl: catalogUrl })
-       
     });
+
     test
         ('@dev verifies adding products to the basket and filling out a payment form', async ({ page: dropitShopSite }) => {
             await verifiesAddingProductsToTheBasketAndFillingOutAPaymentForm({ dropitShopSite, enviromentInput:ENVIRONMENTS_INPUTS[ENV] })
